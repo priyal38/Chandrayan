@@ -16,7 +16,9 @@ const {
 const spacecraft = createSpacecraft(0 ,0 ,0 ,'N');
 // ['f', 'r', 'u', 'b', 'l'];
 
-    const commands = ['f', 'r', 'u','b']; // Test commands
+//test custom commad
+
+    const commands = ['f', 'r', 'u','b','l'];
 
     const finalSpacecraft = executeCommands(spacecraft, commands);
     //print final output

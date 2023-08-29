@@ -1,3 +1,4 @@
+//function for creating spacecraft with direction and position
 function createSpacecraft(x, y, z, direction)
 {
     return {
@@ -7,10 +8,10 @@ function createSpacecraft(x, y, z, direction)
         direction,
     };
 }
-
+//forward movement function
 function moveForward(spacecraft)
 {
-    // Implement forward movement based on the current direction
+   
     switch (spacecraft.direction)
     {
         case 'N':
@@ -25,35 +26,37 @@ function moveForward(spacecraft)
             return { ...spacecraft, z: spacecraft.z + 1 };
         case 'Down':
             return { ...spacecraft, z: spacecraft.z - 1 };
+        default:
+            return spacecraft;
+    }
+}
+//backward movement function
+function moveBackward(spacecraft)
+{
+    
+    switch (spacecraft.direction)
+    {
+        case 'N':
+            return { ...spacecraft, y: spacecraft.y - 1 };
+        case 'S':
+            return { ...spacecraft, y: spacecraft.y + 1 };
+        case 'E':
+            return { ...spacecraft, x: spacecraft.x - 1 };
+        case 'W':
+            return { ...spacecraft, x: spacecraft.x + 1 };
+        case 'Up':
+            return { ...spacecraft, z: spacecraft.z - 1 };
+        case 'Down':
+            return { ...spacecraft, z: spacecraft.z + 1 };
         default:
             return spacecraft;
     }
 }
 
-function moveBackward(spacecraft)
-{
-    // Implement backward movement based on the current direction
-    switch (spacecraft.direction)
-    {
-        case 'N':
-            return { ...spacecraft, y: spacecraft.y - 1 };
-        case 'S':
-            return { ...spacecraft, y: spacecraft.y + 1 };
-        case 'E':
-            return { ...spacecraft, x: spacecraft.x - 1 };
-        case 'W':
-            return { ...spacecraft, x: spacecraft.x + 1 };
-        case 'Up':
-            return { ...spacecraft, z: spacecraft.z - 1 };
-        case 'Down':
-            return { ...spacecraft, z: spacecraft.z + 1 };
-        default:
-            return spacecraft;
-    }
-}
+// turn left function
 function turnLeft(spacecraft)
 {
-    // Implement left rotation
+    
     switch (spacecraft.direction)
     {
         case 'N':
@@ -64,12 +67,17 @@ function turnLeft(spacecraft)
             return { ...spacecraft, direction: 'N' };
         case 'W':
             return { ...spacecraft, direction: 'S' };
+        case 'Up':
+            return { ...spacecraft, direction: 'N' };
+        case 'Down':
+            return { ...spacecraft, direction: 'S' };
             
         default:
             return spacecraft;
     }
 }
 
+//turn right function
 function turnRight(spacecraft)
 {
     // Implement right rotation
@@ -83,10 +91,16 @@ function turnRight(spacecraft)
             return { ...spacecraft, direction: 'S' };
         case 'W':
             return { ...spacecraft, direction: 'N' };
+        case 'Up':
+            return { ...spacecraft, direction: 'S' };
+        case 'Down':
+            return { ...spacecraft, direction: 'N' };
         default:
             return spacecraft;
     }
 }
+
+//turn Up function
 function turnUp(spacecraft)
 {
     // Implement upward rotation
@@ -97,7 +111,7 @@ function turnUp(spacecraft)
     return spacecraft;
 }
 
-
+//turn Down function
 function turnDown(spacecraft)
 {
     // Implement downward rotation
@@ -107,6 +121,8 @@ function turnDown(spacecraft)
     }
     return spacecraft;
 }
+
+//function for executing final given command
 function executeCommands(spacecraft, commands) {
     for (const command of commands) {
         switch (command) {
@@ -134,6 +150,7 @@ function executeCommands(spacecraft, commands) {
     return spacecraft;
 }
 
+ //export all module for testing
 module.exports = {
     createSpacecraft,
     moveForward,

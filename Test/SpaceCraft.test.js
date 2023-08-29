@@ -78,7 +78,7 @@ describe('executeCommands', () =>
             x: 0,
             y: 1,
             z: -1,
-            direction: 'Up',
+            direction: 'N',
         });
     });
 });
