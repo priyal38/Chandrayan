@@ -95,3 +95,13 @@ function turnUp(spacecraft)
     }
     return spacecraft;
 }
+
+function turnDown(spacecraft)
+{
+    // Implement downward rotation
+    if (spacecraft.direction !== 'Down')
+    {
+        return { ...spacecraft, direction: 'Down' };
+    }
+    return spacecraft;
+}
