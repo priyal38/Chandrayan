@@ -105,3 +105,29 @@ function turnDown(spacecraft)
     }
     return spacecraft;
 }
+function executeCommands(spacecraft, commands) {
+    for (const command of commands) {
+        switch (command) {
+            case 'f':
+                spacecraft = moveForward(spacecraft);
+                break;
+            case 'b':
+                spacecraft = moveBackward(spacecraft);
+                break;
+            case 'l':
+                spacecraft = turnLeft(spacecraft);
+                break;
+            case 'r':
+                spacecraft = turnRight(spacecraft);
+                break;
+            case 'u':
+                spacecraft = turnUp(spacecraft);
+                break;
+            case 'd':
+                spacecraft = turnDown(spacecraft);
+                break;
+        }
+    }
+
+    return spacecraft;
+}
