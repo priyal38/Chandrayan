@@ -15,3 +15,9 @@
 
 - Turn the spacecraft left/right (l, r): Rotate the spacecraft 90 degrees to the left or right, changing its facing direction.
 - Turn the spacecraft up/down (u, d): Adjust the spacecraft's angle, rotating it upwards or downwards.
+
+
+## Testing with Jest
+
+ - This project has been developed using Test-Driven Development (TDD) principles, ensuring robustness and accuracy. The Jest testing framework has been utilized for writing and executing tests. Test cases reside in the test/spacecraft.test.js file. To run tests, use the command npm test.
+
