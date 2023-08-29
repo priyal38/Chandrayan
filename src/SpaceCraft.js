@@ -51,3 +51,21 @@ function moveBackward(spacecraft)
             return spacecraft;
     }
 }
+function turnLeft(spacecraft)
+{
+    // Implement left rotation
+    switch (spacecraft.direction)
+    {
+        case 'N':
+            return { ...spacecraft, direction: 'W' };
+        case 'S':
+            return { ...spacecraft, direction: 'E' };
+        case 'E':
+            return { ...spacecraft, direction: 'N' };
+        case 'W':
+            return { ...spacecraft, direction: 'S' };
+        default:
+            return spacecraft;
+    }
+}
+
