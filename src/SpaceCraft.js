@@ -1,3 +1,11 @@
+
+
+
+// Define the boundaries for x, y, and z coordinates
+const X_BOUNDARY = 100;
+const Y_BOUNDARY = 100;
+const Z_BOUNDARY = 100;
+
 //function for creating spacecraft with direction and position
 function createSpacecraft(x, y, z, direction)
 {
@@ -9,49 +17,58 @@ function createSpacecraft(x, y, z, direction)
     };
 }
 //forward movement function
-function moveForward(spacecraft)
-{
-   
-    switch (spacecraft.direction)
-    {
+
+
+function moveForward(spacecraft) {
+    switch (spacecraft.direction) {
         case 'N':
-            return { ...spacecraft, y: spacecraft.y + 1 };
+            if (spacecraft.y < Y_BOUNDARY) spacecraft.y++;
+            break;
         case 'S':
-            return { ...spacecraft, y: spacecraft.y - 1 };
+            if (spacecraft.y > -Y_BOUNDARY) spacecraft.y--;
+            break;
         case 'E':
-            return { ...spacecraft, x: spacecraft.x + 1 };
+            if (spacecraft.x < X_BOUNDARY) spacecraft.x++;
+            break;
         case 'W':
-            return { ...spacecraft, x: spacecraft.x - 1 };
+            if (spacecraft.x > -X_BOUNDARY) spacecraft.x--;
+            break;
         case 'Up':
-            return { ...spacecraft, z: spacecraft.z + 1 };
+            if (spacecraft.z < Z_BOUNDARY) spacecraft.z++;
+            break;
         case 'Down':
-            return { ...spacecraft, z: spacecraft.z - 1 };
-        default:
-            return spacecraft;
+            if (spacecraft.z > -Z_BOUNDARY) spacecraft.z--;
+            break;
     }
+    return spacecraft;
 }
+
+
 //backward movement function
-function moveBackward(spacecraft)
-{
-    
-    switch (spacecraft.direction)
-    {
+function moveBackward(spacecraft) {
+    switch (spacecraft.direction) {
         case 'N':
-            return { ...spacecraft, y: spacecraft.y - 1 };
+            if (spacecraft.y < Y_BOUNDARY) spacecraft.y--;
+            break;
         case 'S':
-            return { ...spacecraft, y: spacecraft.y + 1 };
+            if (spacecraft.y > -Y_BOUNDARY) spacecraft.y++;
+            break;
         case 'E':
-            return { ...spacecraft, x: spacecraft.x - 1 };
+            if (spacecraft.x < X_BOUNDARY) spacecraft.x--;
+            break;
         case 'W':
-            return { ...spacecraft, x: spacecraft.x + 1 };
+            if (spacecraft.x > -X_BOUNDARY) spacecraft.x++;
+            break;
         case 'Up':
-            return { ...spacecraft, z: spacecraft.z - 1 };
+            if (spacecraft.z < Z_BOUNDARY) spacecraft.z--;
+            break;
         case 'Down':
-            return { ...spacecraft, z: spacecraft.z + 1 };
-        default:
-            return spacecraft;
+            if (spacecraft.z > -Z_BOUNDARY) spacecraft.z++;
+            break;
     }
+    return spacecraft;
 }
+
 
 // turn left function
 function turnLeft(spacecraft)
@@ -161,3 +178,50 @@ module.exports = {
     turnDown,
 executeCommands,
 };
+
+
+// function moveBackward(spacecraft)
+// {
+    
+//     switch (spacecraft.direction)
+//     {
+//         case 'N':
+//             return { ...spacecraft, y: spacecraft.y - 1 };
+//         case 'S':
+//             return { ...spacecraft, y: spacecraft.y + 1 };
+//         case 'E':
+//             return { ...spacecraft, x: spacecraft.x - 1 };
+//         case 'W':
+//             return { ...spacecraft, x: spacecraft.x + 1 };
+//         case 'Up':
+//             return { ...spacecraft, z: spacecraft.z - 1 };
+//         case 'Down':
+//             return { ...spacecraft, z: spacecraft.z + 1 };
+//         default:
+//             return spacecraft;
+//     }
+// }
+
+
+
+// function moveForward(spacecraft)
+// {
+   
+//     switch (spacecraft.direction)
+//     {
+//         case 'N':
+//             return { ...spacecraft, y: spacecraft.y + 1 };
+//         case 'S':
+//             return { ...spacecraft, y: spacecraft.y - 1 };
+//         case 'E':
+//             return { ...spacecraft, x: spacecraft.x + 1 };
+//         case 'W':
+//             return { ...spacecraft, x: spacecraft.x - 1 };
+//         case 'Up':
+//             return { ...spacecraft, z: spacecraft.z + 1 };
+//         case 'Down':
+//             return { ...spacecraft, z: spacecraft.z - 1 };
+//         default:
+//             return spacecraft;
+//     }
+// }
