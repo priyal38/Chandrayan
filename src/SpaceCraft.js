@@ -86,3 +86,12 @@ function turnRight(spacecraft)
             return spacecraft;
     }
 }
+function turnUp(spacecraft)
+{
+    // Implement upward rotation
+    if (spacecraft.direction !== 'Up')
+    {
+        return { ...spacecraft, direction: 'Up' };
+    }
+    return spacecraft;
+}
