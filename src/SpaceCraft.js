@@ -131,3 +131,14 @@ function executeCommands(spacecraft, commands) {
 
     return spacecraft;
 }
+
+module.exports = {
+    createSpacecraft,
+    moveForward,
+    moveBackward,
+    turnLeft,
+    turnRight,
+    turnUp,
+    turnDown,
+executeCommands,
+};
