@@ -64,6 +64,7 @@ function turnLeft(spacecraft)
             return { ...spacecraft, direction: 'N' };
         case 'W':
             return { ...spacecraft, direction: 'S' };
+            
         default:
             return spacecraft;
     }
@@ -89,17 +90,18 @@ function turnRight(spacecraft)
 function turnUp(spacecraft)
 {
     // Implement upward rotation
-    if (spacecraft.direction !== 'Up')
+    if (spacecraft.direction == 'N' || spacecraft.direction == 'S' ||spacecraft.direction == 'E' || spacecraft.direction == 'W' )
     {
         return { ...spacecraft, direction: 'Up' };
     }
     return spacecraft;
 }
 
+
 function turnDown(spacecraft)
 {
     // Implement downward rotation
-    if (spacecraft.direction !== 'Down')
+    if (spacecraft.direction == 'N' || spacecraft.direction == 'S' || spacecraft.direction == 'E' || spacecraft.direction == 'W')
     {
         return { ...spacecraft, direction: 'Down' };
     }

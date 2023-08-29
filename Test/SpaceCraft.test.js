@@ -12,6 +12,7 @@ const {
 
 describe('Spacecraft', () =>
 {
+    //test moveforward function
     test('moveForward should update the y-coordinate correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -19,7 +20,7 @@ describe('Spacecraft', () =>
         expect(newSpacecraft.y).toBe(1);
     });
 
-
+//test move backward function
     test('moveBackward should update the y-coordinate correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -27,7 +28,7 @@ describe('Spacecraft', () =>
         expect(newSpacecraft.y).toBe(-1);
     });
 
-
+//test turn left 
     test('turnLeft should change the direction correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -35,7 +36,7 @@ describe('Spacecraft', () =>
         expect(newSpacecraft.direction).toBe('W');
     });
 
-
+//test turn right
     test('turnRight should change the direction correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -43,7 +44,7 @@ describe('Spacecraft', () =>
         expect(newSpacecraft.direction).toBe('E');
     });
 
-
+//test turn up
     test('turnUp should change the direction correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -51,7 +52,7 @@ describe('Spacecraft', () =>
         expect(newSpacecraft.direction).toBe('Up');
     });
 
-
+//test turn down
     test('turnDown should change the direction correctly', () =>
     {
         const spacecraft = createSpacecraft(0, 0, 0, 'N');
@@ -60,9 +61,10 @@ describe('Spacecraft', () =>
     });
 
 
-    // Add more tests for other functions and scenarios as needed
+    
 });
 
+//test final output
 describe('executeCommands', () =>
 {
     test('Should execute commands and return final state', () =>

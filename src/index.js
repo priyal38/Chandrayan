@@ -14,8 +14,9 @@ const {
 //create spacecraft with position and direction
 
 const spacecraft = createSpacecraft(0 ,0 ,0 ,'N');
+// ['f', 'r', 'u', 'b', 'l'];
 
-    const commands = ['f', 'r', 'u', 'b', 'l']; // Test commands
+    const commands = ['f', 'r', 'u','b']; // Test commands
 
     const finalSpacecraft = executeCommands(spacecraft, commands);
     //print final output
