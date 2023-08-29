@@ -69,3 +69,20 @@ function turnLeft(spacecraft)
     }
 }
 
+function turnRight(spacecraft)
+{
+    // Implement right rotation
+    switch (spacecraft.direction)
+    {
+        case 'N':
+            return { ...spacecraft, direction: 'E' };
+        case 'S':
+            return { ...spacecraft, direction: 'W' };
+        case 'E':
+            return { ...spacecraft, direction: 'S' };
+        case 'W':
+            return { ...spacecraft, direction: 'N' };
+        default:
+            return spacecraft;
+    }
+}
