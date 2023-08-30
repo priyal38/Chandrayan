@@ -83,3 +83,41 @@ describe('executeCommands', () =>
     });
 });
 
+//test boundry condition
+describe('executeCommands', () =>
+{
+    test('Should execute commands and return final state', () =>
+    {
+        const spacecraft = createSpacecraft(0,100 , 0, 'N');
+
+        const commands = ['f'];
+        const finalState = executeCommands( spacecraft ,commands);
+
+        expect(finalState).toEqual({
+            x: 0,
+            y: 100,
+            z: 0,
+            direction: 'N',
+        });
+    });
+});
+
+//test multiple rotation 
+describe('executeCommands', () =>
+{
+    test('Should execute commands and return final state', () =>
+    {
+        const spacecraft = createSpacecraft(0,0 , 0, 'N');
+
+        const commands =  ['l', 'l', 'l', 'r', 'r','r'];
+        const finalState = executeCommands( spacecraft ,commands);
+
+        expect(finalState).toEqual({
+            x: 0,
+            y: 0,
+            z: 0,
+            direction: 'N',
+        });
+    });
+});
+
