@@ -20,7 +20,7 @@
 
  - This project has been developed using Test-Driven Development (TDD) principles, ensuring robustness and accuracy. The Jest testing framework has been utilized for writing and executing tests. Test cases reside in the test/spacecraft.test.js file. To run tests, use the command npm test.
 
- ##Programming Language & Tools
+ ## Programming Language & Tools
 
  - Javascript
  - Testing Framework - Jest
@@ -42,6 +42,7 @@ Initial Direction: N
 Final Position: (0, 1, -1)
 
 Final Direction: N
+
 
 
 
