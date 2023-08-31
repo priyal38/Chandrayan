@@ -86,7 +86,7 @@ describe('executeCommands', () =>
 //test boundry condition
 describe('executeCommands', () =>
 {
-    test('Should execute commands and return final state', () =>
+    test('Should execute commands for boundry condition and return final state', () =>
     {
         const spacecraft = createSpacecraft(0,100 , 0, 'N');
 
@@ -105,7 +105,7 @@ describe('executeCommands', () =>
 //test multiple rotation 
 describe('executeCommands', () =>
 {
-    test('Should execute commands and return final state', () =>
+    test('Should execute commands for multiple direction and return final state', () =>
     {
         const spacecraft = createSpacecraft(0,0 , 0, 'N');
 

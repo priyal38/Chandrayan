@@ -3,7 +3,7 @@
 
 
 
--  This repository contains code for the online assesment of Incubyte.
+- This repository contains code for the online assesment of Incubyte.
 
 - This interactive simulation is designed to showcase the navigation capabilities of the Chandrayaan 3 lunar spacecraft through the   vast expanse of the galaxy using JavaScript. 
 - The program accurately interprets and executes a series of commands to navigate the spacecraft.
@@ -16,6 +16,14 @@
 - Turn the spacecraft left/right (l, r): Rotate the spacecraft 90 degrees to the left or right, changing its facing direction.
 - Turn the spacecraft up/down (u, d): Adjust the spacecraft's angle, rotating it upwards or downwards.
 
+## Testing with Jest
+
+ - This project has been developed using Test-Driven Development (TDD) principles, ensuring robustness and accuracy. The Jest testing framework has been utilized for writing and executing tests. Test cases reside in the test/spacecraft.test.js file. To run tests, use the command npm test.
+
+ ##Programming Language & Tools
+
+ - Javascript
+ - Testing Framework - Jest
 ## Example
 
 Given the starting point (0, 0, 0) following (x, y, z) and initial direction N, the following commands should result in the indicated final position and direction:
@@ -36,7 +44,4 @@ Final Position: (0, 1, -1)
 Final Direction: N
 
 
-## Testing with Jest
-
- - This project has been developed using Test-Driven Development (TDD) principles, ensuring robustness and accuracy. The Jest testing framework has been utilized for writing and executing tests. Test cases reside in the test/spacecraft.test.js file. To run tests, use the command npm test.
 
